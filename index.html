@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backgrounds Animados Para Edmila- CSS Avançado</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegação entre Backgrounds -->
+    <nav class="bg-nav">
+        <div class="container">
+            <h1>Backgrounds Animados Para Edmila CSS</h1>
+            <div class="nav-controls">
+                <button class="nav-btn active" data-bg="gradient-wave">Onda Gradiente</button>
+                <button class="nav-btn" data-bg="particles">Partículas Flutuantes</button>
+                <button class="nav-btn" data-bg="geometric">Geométrico Animado</button>
+                <button class="nav-btn" data-bg="liquid">Efeito Líquido</button>
+                <button class="nav-btn" data-bg="nebula">Nebulosa Cósmica</button>
+                <button class="nav-btn" data-bg="grid">Grid Interativo</button>
+                <button class="nav-btn" data-bg="morphing">Morphing Shapes</button>
+                <button class="nav-btn" data-bg="rain">Efeito Chuva</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Backgrounds Container -->
+    <main class="backgrounds-container">
+        <!-- Background 1: Gradient Wave -->
+        <div class="background active" id="gradient-wave">
+            <div class="bg-content">
+                <h2>Onda Gradiente</h2>
+                <p>Gradientes suaves que fluem como ondas no oceano</p>
+                <div class="code-preview">
+                    <pre><code>background: linear-gradient(45deg, 
+    #667eea, #764ba2, #f093fb);
+animation: gradientShift 8s ease infinite;</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background 2: Floating Particles -->
+        <div class="background" id="particles">
+            <div class="particles-container">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <!-- Mais partículas serão geradas via JavaScript -->
+            </div>
+            <div class="bg-content">
+                <h2>Partículas Flutuantes</h2>
+                <p>Partículas que flutuam suavemente pela tela</p>
+            </div>
+        </div>
+
+        <!-- Background 3: Geometric Patterns -->
+        <div class="background" id="geometric">
+            <div class="geometric-pattern">
+                <div class="shape triangle"></div>
+                <div class="shape circle"></div>
+                <div class="shape square"></div>
+                <div class="shape hexagon"></div>
+            </div>
+            <div class="bg-content">
+                <h2>Padrões Geométricos</h2>
+                <p>Formas geométricas que se movem e giram harmonicamente</p>
+            </div>
+        </div>
+
+        <!-- Background 4: Liquid Effect -->
+        <div class="background" id="liquid">
+            <div class="liquid-container">
+                <div class="liquid-blob blob-1"></div>
+                <div class="liquid-blob blob-2"></div>
+                <div class="liquid-blob blob-3"></div>
+            </div>
+            <div class="bg-content">
+                <h2>Efeito Líquido</h2>
+                <p>Blobs orgânicos que se movem como líquido</p>
+            </div>
+        </div>
+
+        <!-- Background 5: Cosmic Nebula -->
+        <div class="background" id="nebula">
+            <div class="cosmic-container">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="nebula-cloud"></div>
+            </div>
+            <div class="bg-content">
+                <h2>Nebulosa Cósmica</h2>
+                <p>Efeito de espaço profundo com estrelas e nebulosas</p>
+            </div>
+        </div>
+
+        <!-- Background 6: Interactive Grid -->
+        <div class="background" id="grid">
+            <div class="grid-container">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <!-- Grid será gerado via JavaScript -->
+            </div>
+            <div class="bg-content">
+                <h2>Grid Interativo</h2>
+                <p>Cells que reagem ao movimento do mouse</p>
+            </div>
+        </div>
+
+        <!-- Background 7: Morphing Shapes -->
+        <div class="background" id="morphing">
+            <div class="morphing-container">
+                <div class="morph-shape"></div>
+            </div>
+            <div class="bg-content">
+                <h2>Morphing Shapes</h2>
+                <p>Formas que se transformam continuamente</p>
+            </div>
+        </div>
+
+        <!-- Background 8: Rain Effect -->
+        <div class="background" id="rain">
+            <div class="rain-container">
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <!-- Gotas serão geradas via JavaScript -->
+            </div>
+            <div class="bg-content">
+                <h2>Efeito Chuva</h2>
+                <p>Gotas de chuva caindo suavemente</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Controls Panel -->
+    <div class="controls-panel">
+        <div class="container">
+            <div class="control-group">
+                <label for="speedControl">Velocidade:</label>
+                <input type="range" id="speedControl" min="1" max="10" value="5">
+            </div>
+            <div class="control-group">
+                <label for="colorControl">Cores:</label>
+                <input type="color" id="colorControl" value="#667eea">
+            </div>
+            <button class="control-btn" id="pauseBtn">
+                <i class="fas fa-pause"></i>
+                Pausar
+            </button>
+            <button class="control-btn" id="fullscreenBtn">
+                <i class="fas fa-expand"></i>
+                Tela Cheia
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
